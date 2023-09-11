@@ -3,7 +3,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = new Sequelize(process.env.POSTGRESQL_DB_URI);
 
 const User = sequelize.define("User", {
-  fullName: DataTypes.STRING,
+  username: DataTypes.STRING,
   email: {
     type: DataTypes.STRING,
     unique: true,
